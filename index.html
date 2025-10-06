@@ -9,11 +9,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <script type="module" crossorigin src="/assets/index-BgXDX92W.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-DZSzmJug.css">
+    <!-- prevent darkreader extension breaking the styles -->
+    <meta name="darkreader-lock">
+    <script type="module" crossorigin src="/assets/index.IAo1w67u.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index.CI2W8_R4.css">
   </head>
   <body>
     <canvas id="particle-canvas"></canvas>
-    <div id="app"></div>
+    <div id="app"></div>
   </body>
+  <script>
+    window.addEventListener('beforeunload', function () {
+      window.scrollTo(0, 0);
+    });
+  </script>
 </html>
