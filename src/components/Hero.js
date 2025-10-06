@@ -112,40 +112,40 @@ export class Hero {
   }
 
   animateIn() {
-    createTimeline()
+    createTimeline({ autoplay: true })
       .add('.hero-badge', {
         translateY: [-50, 0],
         opacity: [0, 1],
         duration: 1000,
         easing: 'easeOutExpo'
-      })
+      }, 0)
       .add('.title-line', {
         translateX: [-100, 0],
         opacity: [0, 1],
         duration: 1200,
         delay: stagger(150),
         easing: 'easeOutExpo'
-      }, '-=800')
+      }, 200)
       .add('.subtitle-item', {
         translateY: [30, 0],
         opacity: [0, 1],
         duration: 1000,
         delay: stagger(100),
         easing: 'easeOutExpo'
-      }, '-=600')
+      }, 600)
       .add('.hero-cta button', {
         scale: [0.8, 1],
         opacity: [0, 1],
         duration: 800,
         delay: stagger(100),
         easing: 'easeOutElastic(1, .8)'
-      }, '-=400')
+      }, 1000)
       .add('.hero-visual', {
         opacity: [0, 1],
         scale: [0.8, 1],
         duration: 1500,
         easing: 'easeOutExpo'
-      }, '-=1200');
+      }, 800);
 
     // Animate orbs
     animate('.visual-orb', {
@@ -158,21 +158,23 @@ export class Hero {
 
     // Morph shape
     const shapePath = document.querySelector('.shape-path');
-    const paths = [
-      'M200,50 L350,150 L350,250 L200,350 L50,250 L50,150 Z',
-      'M200,70 L330,140 L360,260 L210,340 L60,260 L40,140 Z',
-      'M200,50 L350,150 L350,250 L200,350 L50,250 L50,150 Z'
-    ];
+    if (shapePath) {
+      const paths = [
+        'M200,50 L350,150 L350,250 L200,350 L50,250 L50,150 Z',
+        'M200,70 L330,140 L360,260 L210,340 L60,260 L40,140 Z',
+        'M200,50 L350,150 L350,250 L200,350 L50,250 L50,150 Z'
+      ];
 
-    let pathIndex = 0;
-    setInterval(() => {
-      pathIndex = (pathIndex + 1) % paths.length;
-      animate(shapePath, {
-        d: paths[pathIndex],
-        duration: 2000,
-        easing: 'easeInOutQuad'
-      });
-    }, 3000);
+      let pathIndex = 0;
+      setInterval(() => {
+        pathIndex = (pathIndex + 1) % paths.length;
+        animate(shapePath, {
+          d: paths[pathIndex],
+          duration: 2000,
+          easing: 'easeInOutQuad'
+        });
+      }, 3000);
+    }
 
     // Scroll indicator animation
     animate('.scroll-line', {

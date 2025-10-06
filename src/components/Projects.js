@@ -7,18 +7,20 @@ export class Projects {
       {
         title: 'Attendance Portal',
         url: 'https://attendance.sa-fet.com',
-        description: 'Advanced attendance tracking and management system',
+        description: 'Comprehensive attendance management system for faculty members',
         icon: 'M9 5H7C5.89543 5 5 5.89543 5 7V19C5 20.1046 5.89543 21 7 21H17C18.1046 21 19 20.1046 19 19V7C19 5.89543 18.1046 5 17 5H15M9 5C9 6.10457 9.89543 7 11 7H13C14.1046 7 15 6.10457 15 5M9 5C9 3.89543 9.89543 3 11 3H13C14.1046 3 15 3.89543 15 5M12 12H15M12 16H15M9 12H9.01M9 16H9.01',
         color: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-        stats: { users: '2.5K+', uptime: '99.9%' }
+        stats: { faculty: '150+', accuracy: '99.9%' },
+        gradient2: 'linear-gradient(45deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%)'
       },
       {
-        title: 'SA Hub',
+        title: 'FET Hub',
         url: 'https://hub.sa-fet.com',
-        description: 'Central hub for student resources and announcements',
-        icon: 'M21 13.255A23.931 23.931 0 0112 15C8.94 15 6.07 14.31 3.5 13.025V21L12 17L20.5 21V13.255ZM12 13C16.9706 13 21 10.7614 21 8C21 5.23858 16.9706 3 12 3C7.02944 3 3 5.23858 3 8C3 10.7614 7.02944 13 12 13Z',
+        description: 'Discover and track all ongoing cultural, sports, and tech events at FET campus',
+        icon: 'M8 7V3M16 7V3M7 11H17M5 21H19C20.1046 21 21 20.1046 21 19V7C21 5.89543 20.1046 5 19 5H5C3.89543 5 3 5.89543 3 7V19C3 20.1046 3.89543 21 5 21Z',
         color: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)',
-        stats: { resources: '500+', visits: '10K+' }
+        stats: { events: '50+', students: '3K+' },
+        gradient2: 'linear-gradient(45deg, rgba(240, 147, 251, 0.1) 0%, rgba(245, 87, 108, 0.1) 100%)'
       }
     ];
 
@@ -48,6 +50,8 @@ export class Projects {
             ${this.projects.map((project, index) => `
               <div class="project-card glass hover-lift" data-index="${index}">
                 <div class="project-background" style="background: ${project.color}"></div>
+                <div class="project-mesh" style="background: ${project.gradient2 || project.color}"></div>
+                <div class="project-pattern"></div>
                 <div class="project-icon">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="${project.icon}" />

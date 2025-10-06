@@ -43,6 +43,7 @@
   font-size: 0.85rem;
   color: var(--accent);
   margin-bottom: 2rem;
+  opacity: 0;
 }
 
 .badge-icon {
@@ -58,10 +59,29 @@
   margin-bottom: 2rem;
   display: flex;
   flex-direction: column;
+}
+
+.title-line {
+  opacity: 0;
   background: linear-gradient(135deg, var(--light) 0%, var(--accent) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+}
+
+.subtitle-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  opacity: 0;
+}
+
+.hero-cta button {
+  opacity: 0;
+}
+
+.hero-visual {
+  opacity: 0;
 }
 
 .hero-subtitle {

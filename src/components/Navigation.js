@@ -34,10 +34,10 @@ export class Navigation {
             <span class="nav-link-text">Connect</span>
             <span class="nav-link-dot"></span>
           </a>
-        </div>
 
-        <div class="nav-indicator">
-          <div class="nav-indicator-line"></div>
+          <div class="nav-indicator">
+            <div class="nav-indicator-line"></div>
+          </div>
         </div>
       </nav>
     `;
@@ -46,6 +46,8 @@ export class Navigation {
   init() {
     this.animateIn();
     this.bindEvents();
+    // Initialize indicator position after animation
+    setTimeout(() => this.setActiveLink('hero'), 100);
   }
 
   animateIn() {
@@ -104,11 +106,11 @@ export class Navigation {
       const indicator = document.querySelector('.nav-indicator-line');
       const linkRect = activeLink.getBoundingClientRect();
       const navRect = document.querySelector('.nav-menu').getBoundingClientRect();
-      
+
       animate(indicator, {
         left: linkRect.left - navRect.left,
         width: linkRect.width,
-        duration: 600,
+        duration: 0,
         easing: 'easeOutExpo'
       });
     }

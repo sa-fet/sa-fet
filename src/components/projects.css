@@ -19,6 +19,7 @@
   letter-spacing: 1px;
   text-transform: uppercase;
   margin-bottom: 1rem;
+  opacity: 0;
 }
 
 .section-title {
@@ -28,6 +29,7 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  opacity: 0;
 }
 
 .section-description {
@@ -35,6 +37,7 @@
   color: var(--gray);
   max-width: 600px;
   margin: 0 auto;
+  opacity: 0;
 }
 
 .projects-grid {
@@ -49,6 +52,7 @@
   padding: 3rem;
   overflow: hidden;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0;
 }
 
 .project-background {
@@ -56,6 +60,38 @@
   inset: 0;
   opacity: 0.15;
   transition: all 0.4s ease;
+  filter: blur(40px);
+}
+
+.project-mesh {
+  position: absolute;
+  inset: 0;
+  opacity: 0.05;
+  background-size: 20px 20px;
+  background-image: 
+    repeating-linear-gradient(0deg, transparent, transparent 19px, currentColor 19px, currentColor 20px),
+    repeating-linear-gradient(90deg, transparent, transparent 19px, currentColor 19px, currentColor 20px);
+  transition: all 0.4s ease;
+}
+
+.project-pattern {
+  position: absolute;
+  inset: 0;
+  opacity: 0.03;
+  background-image: 
+    radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.2) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 40% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+  transition: all 0.4s ease;
+}
+
+.project-card:hover .project-mesh {
+  opacity: 0.1;
+  transform: scale(1.1);
+}
+
+.project-card:hover .project-pattern {
+  opacity: 0.08;
 }
 
 .project-icon {
@@ -186,6 +222,7 @@
   border-radius: 15px;
   transition: all 0.3s ease;
   cursor: pointer;
+  opacity: 0;
 }
 
 .dial-item:hover {
