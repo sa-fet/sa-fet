@@ -130,13 +130,13 @@ export class Projects {
       .add('.section-description', {
         translateY: [20, 0],
         opacity: [0, 1],
-        duration: 800,
+        duration: 100,
         easing: 'easeOutExpo'
       }, '-=800')
       .add('.project-card', {
         translateY: [60, 0],
         opacity: [0, 1],
-        duration: 1200,
+        duration: 100,
         delay: stagger(150),
         easing: 'easeOutExpo'
       }, '-=400')

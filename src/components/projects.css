@@ -257,9 +257,44 @@
 @media (max-width: 768px) {
   .projects-grid {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .project-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .project-title {
+    font-size: 1.5rem;
+  }
+
+  .project-description {
+    font-size: 0.9rem;
   }
 
   .programs-dial {
     grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .dial-item {
+    padding: 1.5rem 0.75rem;
+  }
+
+  .dial-icon {
+    font-size: 2rem;
+  }
+
+  .dial-name {
+    font-size: 0.85rem;
+    text-align: center;
+  }
+
+  .section-title {
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+
+  .section-description {
+    font-size: 1rem;
   }
 }

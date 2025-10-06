@@ -292,6 +292,10 @@ select.form-input > option {
   .tab-selector {
     flex-direction: row;
     overflow-x: auto;
+    gap: 0.75rem;
+    padding-bottom: 0.5rem;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
   }
 
   .tab-track {
@@ -301,13 +305,58 @@ select.form-input > option {
   .tab-btn {
     margin-left: 0;
     white-space: nowrap;
+    padding: 1rem 1.25rem;
+    font-size: 0.9rem;
+    flex-shrink: 0;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem;
+  }
+
+  .lead-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .lead-name {
+    font-size: 1.25rem;
+  }
+
+  .lead-role {
+    font-size: 0.9rem;
+  }
+
+  .lead-contacts {
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .contact-btn {
+    width: 40px;
+    height: 40px;
   }
 
   .form-row {
     grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .form-input {
+    font-size: 16px;
+  }
+
+  .form-submit {
+    padding: 1rem;
+    font-size: 1rem;
   }
 
   .connect-form {
-    padding: 2rem;
+    padding: 1.5rem;
+  }
+
+  .section-title {
+    font-size: clamp(2rem, 8vw, 3rem);
   }
 }

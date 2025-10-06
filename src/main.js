@@ -67,7 +67,7 @@ class App {
           <div class="footer-section">
             <h4>Quick Links</h4>
             <a href="https://attendance.sa-fet.com" target="_blank">Attendance Portal</a>
-            <a href="https://hub.sa-fet.com" target="_blank">SA Hub</a>
+            <a href="https://hub.sa-fet.com" target="_blank">FET Hub</a>
           </div>
           <div class="footer-section">
             <h4>Contact</h4>

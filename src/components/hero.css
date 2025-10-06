@@ -293,7 +293,12 @@
 
 @media (max-width: 768px) {
   .hero-content {
-    padding-top: 100px;
+    padding-top: 30px;
+    max-width: 100%;
+  }
+
+  .hero-title {
+    font-size: clamp(2rem, 10vw, 3.5rem);
   }
 
   .hero-visual {
@@ -302,9 +307,47 @@
 
   .hero-cta {
     flex-direction: column;
+    width: 100%;
+  }
+
+  .cta-primary,
+  .cta-secondary {
+    width: 100%;
+    justify-content: center;
+    padding: 1rem;
   }
 
   .hero-stats {
     flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: space-around;
+  }
+
+  .stat-item {
+    min-width: fit-content;
+  }
+
+  .stat-number {
+    font-size: 2rem;
+  }
+
+  .stat-label {
+    font-size: 0.8rem;
+  }
+
+  .hero-subtitle {
+    gap: 0.75rem;
+  }
+
+  .subtitle-item {
+    flex-wrap: wrap;
+  }
+
+  .subtitle-main {
+    font-size: 1rem;
+  }
+
+  .subtitle-sub {
+    font-size: 0.85rem;
   }
 }
