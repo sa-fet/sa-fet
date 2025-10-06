@@ -58,6 +58,13 @@ export class Hero {
                   <path d="M5 12H19M19 12L12 5M19 12L12 19" />
                 </svg>
               </button>
+              <button class="cta-secondary" data-scroll-to="request-event">
+                <span>Request Event</span>
+                <svg class="cta-icon" viewBox="0 0 24 24">
+                  <rect x="3" y="6" width="18" height="15" rx="2" />
+                  <path d="M3 10H21M7 3V6M17 3V6" />
+                </svg>
+              </button>
               <button class="cta-secondary" data-scroll-to="projects">
                 <span>Explore Projects</span>
               </button>
@@ -190,7 +197,16 @@ export class Hero {
     document.querySelectorAll('[data-scroll-to]').forEach(btn => {
       btn.addEventListener('click', (e) => {
         const target = e.currentTarget.dataset.scrollTo;
-        document.getElementById(target)?.scrollIntoView({ behavior: 'smooth' });
+        if (target === 'request-event') {
+          // Scroll to connect section and switch to event tab
+          document.getElementById('connect')?.scrollIntoView({ behavior: 'smooth' });
+          setTimeout(() => {
+            const eventTab = document.querySelector('[data-tab="event"]');
+            if (eventTab) eventTab.click();
+          }, 500);
+        } else {
+          document.getElementById(target)?.scrollIntoView({ behavior: 'smooth' });
+        }
       });
     });
   }

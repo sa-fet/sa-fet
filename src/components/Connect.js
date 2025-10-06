@@ -38,7 +38,7 @@ export class Connect {
         <div class="container">
           <div class="section-header">
             <span class="section-badge">Get Connected</span>
-            <h2 class="section-title">Let's Talk</h2>
+            <h2 class="section-title">Connect with Us</h2>
           </div>
 
           <div class="connect-layout">
