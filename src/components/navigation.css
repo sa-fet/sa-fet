@@ -121,7 +121,16 @@
   }
 
   .nav-menu {
-    gap: 1.5rem;
+    gap: 1rem;
+    position: relative;
+  }
+
+  .nav-link {
+    display: none;
+  }
+
+  .nav-link.active {
+    display: flex;
   }
 
   .logo-title {
@@ -134,5 +143,9 @@
 
   .nav-link-text {
     font-size: 0.85rem;
+  }
+
+  .nav-indicator {
+    display: none;
   }
 }
