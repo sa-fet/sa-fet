@@ -1,6 +1,6 @@
-# Student Affairs Committee - FET, JU
+# Student Affairs - FET, JU
 
-Student Affairs Committee for the Faculty of Engineering & Technology, Jain University.
+Student Affairs for the Faculty of Engineering & Technology, Jain University.
 
 ## About
 
@@ -33,4 +33,4 @@ Submit event requests or grievances through our website. All submissions are rev
 
 ---
 
-© 2025 Student Affairs Committee, Faculty of Engineering & Technology, Jain University
+© 2025 Student Affairs, Faculty of Engineering & Technology, Jain University

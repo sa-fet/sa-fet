@@ -21,7 +21,6 @@ export class Hero {
 
             <h1 class="hero-title">
               <span class="title-line">Student Affairs</span>
-              <span class="title-line">Committee</span>
             </h1>
 
             <div class="hero-subtitle">

@@ -61,7 +61,7 @@ class App {
       <div class="container">
         <div class="footer-content">
           <div class="footer-section">
-            <h4>Student Affairs Committee</h4>
+            <h4>Student Affairs</h4>
             <p>Faculty of Engineering & Technology<br>Jain (Deemed-to-be University)</p>
           </div>
           <div class="footer-section">
@@ -75,7 +75,7 @@ class App {
           </div>
         </div>
         <div class="footer-bottom">
-          <p>&copy; ${new Date().getFullYear()} Student Affairs Committee, FET - Jain University. All rights reserved.</p>
+          <p>&copy; ${new Date().getFullYear()} Student Affairs, FET - Jain University. All rights reserved.</p>
         </div>
       </div>
     `;
