@@ -10,24 +10,27 @@ export class Connect {
         role: 'Example Role',
         email: 'example@jainuniversity.ac.in',
         phone: '+91 98765 43210',
+        whatsapp: 'https://wa.me/919876543210',
         linkedin: 'https://linkedin.com/in/dr-benaka-prasad-s-b-7bb524203',
-        avatar: 'https://media.licdn.com/dms/image/v2/C4D03AQEdB2M9uKYfkA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1609965589011?e=1762387200&v=beta&t=njk562OHwXigAGclSCCzdfYqPfc-0Emi-kly5CHUSVI'
+        avatar: 'https://media.licdn.com/dms/image/v2/C4D03AQEdB2M9uKYfkA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1609965589011?e=1762387200&v=beta&t=njk562OHwXigAGclSCCzdfYqPfc-0Emi-kly5CHUSVI',
       },
       {
         name: 'Example Name',
         role: 'Student Head',
         email: 'example@jainuniversity.ac.in',
         phone: '+91 98765 43211',
+        whatsapp: 'https://wa.me/919876543211',
         instagram: 'https://instagram.com/safet_ju',
-        avatar: 'url'
+        avatar: 'url',
       },
       {
         name: 'Example Name',
         role: 'Event Coordinator',
         email: 'example@jainuniversity.ac.in',
         phone: '+91 98765 43212',
+        whatsapp: 'https://wa.me/919876543212',
         github: 'https://github.com/safet-ju',
-        avatar: 'url'
+        avatar: 'url',
       }
     ];
   }
@@ -92,11 +95,10 @@ export class Connect {
       ${this.leads.map((lead, index) => `
       <div class="lead-card glass" data-index="${index}">
         <div class="lead-avatar">
-        ${
-          lead.avatar && lead.avatar.startsWith('http')
-          ? `<img src="${lead.avatar}" alt="${lead.name}" />`
-          : (lead.avatar || '')
-        }
+        ${lead.avatar && lead.avatar.startsWith('http')
+        ? `<img src="${lead.avatar}" alt="${lead.name}" />`
+        : (lead.avatar || '')
+      }
         </div>
         <h3 class="lead-name">${lead.name}</h3>
         <p class="lead-role">${lead.role}</p>
@@ -111,6 +113,13 @@ export class Connect {
           <path d="M3 5C3 3.89543 3.89543 3 5 3H8.27924C8.70967 3 9.09181 3.27543 9.22792 3.68377L10.7257 8.17721C10.8831 8.64932 10.6694 9.16531 10.2243 9.38787L7.96701 10.5165C9.06925 12.9612 11.0388 14.9308 13.4835 16.033L14.6121 13.7757C14.8347 13.3306 15.3507 13.1169 15.8228 13.2743L20.3162 14.7721C20.7246 14.9082 21 15.2903 21 15.7208V19C21 20.1046 20.1046 21 19 21H18C9.71573 21 3 14.2843 3 6V5Z" />
           </svg>
         </a>
+        ${lead.whatsapp ? `
+        <a href="${lead.whatsapp}" target="_blank" class="contact-btn" title="WhatsApp">
+          <svg viewBox="0 0 24 24">
+            <path d="M16.7 14.2c-.3-.1-1.7-.8-2-1-.3-.2-.5-.2-.7.1-.2.3-.7 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.3-.8-.7-1.4-1.6-1.6-1.9-.2-.3 0-.5.1-.7.1-.1.2-.3.3-.4.1-.1.1-.2.2-.3.1-.2.1-.4 0-.6-.1-.2-.7-1.7-.9-2.3-.2-.6-.4-.5-.6-.5h-.5c-.2 0-.5.1-.7.3-.2.2-.7.7-.7 1.7 0 1 .7 2.1 1.5 3.1 1.8 2.2 3.6 2.9 4.9 3.2.5.1.9.1 1.2.1.4 0 1.2-.5 1.4-1 .2-.5.2-.9.1-1.1zm-4.7-11.2c-5.1 0-9.2 4.1-9.2 9.2 0 1.6.4 3.1 1.1 4.5l-1.2 4.3c-.2.7.5 1.4 1.2 1.2l4.3-1.2c1.3.7 2.8 1.1 4.5 1.1 5.1 0 9.2-4.1 9.2-9.2s-4.1-9.2-9.2-9.2zm0 16.7c-1.5 0-2.9-.4-4.1-1.1l-.3-.2-2.6.7.7-2.6-.2-.3c-.7-1.2-1.1-2.6-1.1-4.1 0-4.2 3.4-7.6 7.6-7.6s7.6 3.4 7.6 7.6-3.4 7.6-7.6 7.6z"/>
+          </svg>
+        </a>
+        ` : ''}
         ${lead.linkedin ? `
         <a href="${lead.linkedin}" target="_blank" class="contact-btn" title="LinkedIn">
           <svg viewBox="0 0 24 24">
@@ -274,22 +283,22 @@ export class Connect {
       .add('.tab-selector', {
         translateX: [-100, 0],
         opacity: [0, 1],
-        duration: 1000,
+        duration: 400,
         easing: 'easeOutExpo'
       }, 0)
       .add('.tab-btn', {
         translateY: [30, 0],
         opacity: [0, 1],
-        duration: 600,
-        delay: stagger(100),
+        duration: 250,
+        delay: stagger(60),
         easing: 'easeOutExpo'
-      }, 200)
+      }, 100)
       .add('.tab-content.active', {
         scale: [0.95, 1],
         opacity: [0, 1],
-        duration: 800,
+        duration: 350,
         easing: 'easeOutExpo'
-      }, 600);
+      }, 250);
 
     this.animateLeadCards();
 
@@ -302,17 +311,17 @@ export class Connect {
         const trackRect = document.querySelector('.tab-track').getBoundingClientRect();
         indicator.style.top = `${btnRect.top - trackRect.top}px`;
         indicator.style.height = `${btnRect.height}px`;
-        indicator.style.transition = 'all 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
+        indicator.style.transition = 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)';
       }
-    }, 1000);
+    }, 400);
   }
 
   animateLeadCards() {
     animate('.lead-card', {
       translateY: [40, 0],
       opacity: [0, 1],
-      duration: 800,
-      delay: stagger(150),
+      duration: 350,
+      delay: stagger(80),
       easing: 'easeOutExpo'
     });
   }

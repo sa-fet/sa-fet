@@ -116,37 +116,37 @@ export class Projects {
   animateIn() {
     createTimeline()
       .add('.section-badge', {
-        translateY: [-30, 0],
+        translateY: [-20, 0],
         opacity: [0, 1],
-        duration: 800,
+        duration: 400,
         easing: 'easeOutExpo'
       })
       .add('.section-title', {
-        translateX: [-50, 0],
+        translateX: [-30, 0],
         opacity: [0, 1],
-        duration: 1000,
+        duration: 500,
         easing: 'easeOutExpo'
-      }, '-=600')
+      }, '-=250')
       .add('.section-description', {
-        translateY: [20, 0],
+        translateY: [10, 0],
         opacity: [0, 1],
-        duration: 100,
+        duration: 80,
         easing: 'easeOutExpo'
-      }, '-=800')
+      }, '-=300')
       .add('.project-card', {
-        translateY: [60, 0],
+        translateY: [30, 0],
         opacity: [0, 1],
-        duration: 100,
-        delay: stagger(150),
+        duration: 80,
+        delay: stagger(80),
         easing: 'easeOutExpo'
-      }, '-=400')
+      }, '-=150')
       .add('.dial-item', {
         scale: [0, 1],
         opacity: [0, 1],
-        duration: 600,
-        delay: stagger(50),
+        duration: 300,
+        delay: stagger(30),
         easing: 'easeOutElastic(1, .8)'
-      }, '-=800');
+      }, '-=200');
   }
 
   bindEvents() {
