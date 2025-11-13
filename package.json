@@ -6,6 +6,7 @@
   "license": "MIT",
   "type": "module",
   "packageManager": "pnpm@10.15.0",
+  "homepage": "https://sa-fet.github.io/sa-fet",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
