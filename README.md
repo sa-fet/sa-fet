@@ -22,6 +22,8 @@ We're the student body responsible for organizing events, managing grievances, a
 
 **FET Hub** — Campus wide event management platform for students' activities
 
+**Convocation Portal** — Platform for managing distribution of Convocation photos' hard & soft copies for 14 & 15th Jain Annual Convocation
+
 ## Contact
 
 - Website: [sa-fet.com](https://sa-fet.com)
